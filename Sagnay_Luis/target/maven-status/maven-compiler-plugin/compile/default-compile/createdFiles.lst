@@ -1,0 +1,9 @@
+espe\edu\sagnay_luis\controller\HorarioController.class
+espe\edu\sagnay_luis\dao\Conection.class
+espe\edu\sagnay_luis\resources\JakartaEE10Resource.class
+espe\edu\sagnay_luis\model\Empleado.class
+espe\edu\sagnay_luis\dao\EmpleadoDao.class
+espe\edu\sagnay_luis\JakartaRestConfiguration.class
+espe\edu\sagnay_luis\controller\EmpleadoController.class
+espe\edu\sagnay_luis\dao\HorarioTrabajoDao.class
+espe\edu\sagnay_luis\model\HorarioTrabajo.class
