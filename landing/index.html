@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>Luis Sagnay</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#start">Inicio</a></li>
+                <li><a href="#about-me">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+            </ul>
+            <button id="theme-toggle" aria-label="Cambiar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <header id="start">
+        <div class="foto">
+            <img src="img/luis.jpeg" alt="Foto de Luis Sagnay">
+        </div>
+        <div class="info">
+            <h1>Hola, soy Luis Sagnay</h1>
+            <h3>Estudiante de la carrera de Ingeniería de Software</h3>
+        </div>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <h2>Sobre mí</h2>
+            <section id="about-me">
+                <article>
+                    <p>
+                        Tengo 20 años y actualmente estudio la carrera de Ingeniería de Software en la Universidad de las Fuerzas Armadas ESPE, donde me encuentro cursando el quinto semestre. 
+                    </p>
+                </article>
+                <article>
+                    <h3>Formación académica</h3>
+                    <ul>
+                        <li><strong>Educación Primaria:</strong> Unidad Educativa Estados Unidos</li><br>
+                        <li><strong>Educación Secundaria:</strong> Unidad Educativa Milenio Bicentenario</li><br>
+                        <li><strong>Educación Superior:</strong> Universidad de las Fuerzas Armadas ESPE (2021 - presente)</li><br>
+                    </ul>
+                </article>
+
+                <article>
+                    <h3>Tecnologías</h3>
+                    <ul class="technologies">
+                        <li><i class="fa-solid fa-code"></i><strong> Lenguajes:</strong>
+                            <ul>
+                                <li><strong>Java</strong></li>
+                                <li><strong>C#</strong></li>
+                                <li><strong>JavaScript</strong></li>
+                                <li><strong>HTML</strong></li>
+                                <li><strong>CSS</strong></li>
+                                <li><strong>Python</strong></li>
+                                <li><strong>C++</strong></li>
+                            </ul>
+                        </li><br>
+                        <li><i class="fa-solid fa-database"></i><strong> Base de datos:</strong>
+                            <ul>
+                                <li><strong>MongoDB</strong></li>
+                                <li><strong>SQL Server</strong></li>
+                                <li><strong>PostgreSQL</strong></li>
+                            </ul>
+                        </li><br>
+                        <li><i class="fa-solid fa-wrench"></i><strong> Otros:</strong>
+                            <ul>
+                                <li><strong>Git</strong></li>
+                                <li><strong>GitHub</strong></li>
+                                <li><strong>Visual Studio Code</strong></li>
+                            </ul>
+                        </li><br>
+                    </ul>
+                </article>
+                
+                <article>
+                    <h3>Hobbies</h3>
+                    <p>
+                        En mi tiempo libre me gusta practicar deportes, ver películas y tocar guitarra. 
+                    </p>
+                </article>
+            </section>
+            
+            <h2>Proyectos Recientes</h2>
+            <section id="projects" class="projects">
+                <article class="card-project">
+                    <img src="img/sureno.png" alt="licoreria sureno">
+                    <h3>Tienda de licores  online "Sureño"</h3>
+                    <p>Sitio web para la venta y administracion de licores de la marca "Sureño".</p>
+                    <p><strong>HTML</strong><strong>CSS</strong><strong>JavaScript</strong><strong>MongoDB</strong></p>
+                    <a href="https://github.com/luis-sagx/Sureno.git"><strong><i class="fab fa-github"></i> Código</strong></a>
+                </article>
+    
+                <article class="card-project">
+                    <img src="img/hospital.png" alt="gestion hospitalaria">
+                    <h3>Sistema de gestion Hospitalaria</h3>
+                    <p>Sitio web para la gestion de citas y tratamientos medicos</p>
+                    <p><strong>HTML</strong><strong>CSS</strong><strong>JavaScript</strong><strong>C#</strong><strong>SQLServer</strong></p>
+                    <a href="https://github.com/luis-sagx/Sistema_Gestion_Hospitalaria.git"><strong><i class="fab fa-github"></i> Código</strong></a>
+                </article>
+    
+                <article class="card-project">
+                    <img src="img/carta.png" alt="envio de cartas">
+                    <h3>Envio de cartas "Simply Lovely"</h3>
+                    <p>Pagina web enfocada en niños para que puedan crear y personalizar cartas y enviarlas a sus familiares</p>
+                    <p><strong>HTML</strong><strong>CSS</strong><strong>JavaScript</strong><strong>Node JS</strong></p>
+                    <a href="https://github.com/MateoJa54/carta.git"><strong><i class="fab fa-github"></i> Código</strong></a>
+                </article>
+            </section>
+            <section>
+                <h2>Contáctame</h2>
+                <div class="contact-container">
+                <ul class="contact-info">
+                    <li><i class="fas fa-envelope"></i> <strong>Correo:</strong> <a href="mailto:lesagnay@espe.edu.ec">lesagnay@espe.edu.ec</a></li>
+                    <li><i class="fas fa-phone"></i> <strong>Teléfono:</strong> +593 983172773</li>
+                    <li><i class="fas fa-location-dot"></i> <strong>Ubicación:</strong> Quito, Ecuador</li>
+                </ul>
+
+                <div class="contact-social">
+                    <a href="https://www.linkedin.com/in/luis-sagnay-030b8b361/" target="_blank" class="icon-social"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/luis-sagx" target="_blank" class="icon-social"><i class="fab fa-github"></i></a>
+                    <a href="https://www.facebook.com/luis.sagnay.3388/" target="_blank" class="icon-social"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/luis.sagx/" target="_blank" class="icon-social"><i class="fab fa-instagram"></i></a>
+                </div>
+                </div>
+            </section>
+        </main>   
+    </div>
+    <footer>
+        &copy; 2025 Luis Sagnay. Todos los derechos reservados.
+    </footer> 
+    
+</body>
+
+<script src="script.js"></script>
+</html>

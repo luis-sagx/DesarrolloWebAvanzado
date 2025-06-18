@@ -1,0 +1,8 @@
+espe\edu\examen_sagnay_luis\soap\HotelService.class
+espe\edu\examen_sagnay_luis\JakartaRestConfiguration.class
+espe\edu\examen_sagnay_luis\dao\Conection.class
+espe\edu\examen_sagnay_luis\model\Hotel.class
+espe\edu\examen_sagnay_luis\resources\JakartaEE10Resource.class
+espe\edu\examen_sagnay_luis\controller\HotelController.class
+espe\edu\examen_sagnay_luis\dao\HotelDao.class
+espe\edu\examen_sagnay_luis\soap\main\Main.class

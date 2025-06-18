@@ -1,0 +1,6 @@
+espe\edu\app1\dao\Conection.class
+espe\edu\app1\resources\JakartaEE10Resource.class
+espe\edu\app1\model\User.class
+espe\edu\app1\JakartaRestConfiguration.class
+espe\edu\app1\dao\UserDao.class
+espe\edu\app1\controller\UserController.class
