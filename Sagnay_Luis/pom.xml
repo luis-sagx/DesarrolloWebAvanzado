@@ -24,6 +24,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.25</version>
         </dependency>
+<<<<<<< HEAD
         <dependency>
             <groupId>jakarta.xml.ws</groupId>
             <artifactId>jakarta.xml.ws-api</artifactId>
@@ -45,6 +46,10 @@
         </repository>
     </repositories>
     
+=======
+    </dependencies>
+    
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
     <build>
         <plugins>
             <plugin>

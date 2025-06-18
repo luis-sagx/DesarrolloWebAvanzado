@@ -74,10 +74,17 @@ public class HorarioController extends HttpServlet {
 
         if (idStr != null && !idStr.isEmpty()) {
             int id = Integer.parseInt(idStr);
+<<<<<<< HEAD
             HorarioTrabajo h = new HorarioTrabajo(id, dia, entrada, salida, idEmpleado, true);
             dao.update(h);
         } else {
             HorarioTrabajo h = new HorarioTrabajo(dia, entrada, salida, idEmpleado, true);
+=======
+            HorarioTrabajo h = new HorarioTrabajo(id, dia, entrada, salida, idEmpleado);
+            dao.update(h);
+        } else {
+            HorarioTrabajo h = new HorarioTrabajo(dia, entrada, salida, idEmpleado);
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
             dao.save(h);
         }
 

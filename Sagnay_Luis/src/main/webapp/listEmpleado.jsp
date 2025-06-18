@@ -11,6 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+<<<<<<< HEAD
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -73,6 +74,8 @@
                 color: #5a94e0;
             }
         </style>
+=======
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
     </head>
         <body>
         <h2>Lista de Empleados</h2>

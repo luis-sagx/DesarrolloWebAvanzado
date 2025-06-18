@@ -31,7 +31,11 @@ public class HorarioTrabajoDao {
 
     public List<HorarioTrabajo> findAll() {
         List<HorarioTrabajo> lista = new ArrayList<>();
+<<<<<<< HEAD
         String sql = "SELECT h.* FROM HorarioTrabajo h JOIN Empleado e ON h.id_empleado = e.id_empleado WHERE h.activo = TRUE AND e.activo = TRUE";
+=======
+        String sql = "SELECT * FROM HorarioTrabajo";
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
         try (Connection conn = Conection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
@@ -42,7 +46,10 @@ public class HorarioTrabajoDao {
                 h.setHoraEntrada(rs.getString("hora_entrada"));
                 h.setHoraSalida(rs.getString("hora_salida"));
                 h.setIdEmpleado(rs.getInt("id_empleado"));
+<<<<<<< HEAD
                 h.setActivo(rs.getBoolean("activo"));
+=======
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
                 lista.add(h);
             }
         } catch (SQLException e) {
@@ -89,7 +96,11 @@ public class HorarioTrabajoDao {
     }
 
     public boolean delete(int id) {
+<<<<<<< HEAD
         String sql = "UPDATE HorarioTrabajo SET activo = FALSE WHERE id_horario = ?";
+=======
+        String sql = "DELETE FROM HorarioTrabajo WHERE id_horario = ?";
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
         try (Connection conn = Conection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, id);

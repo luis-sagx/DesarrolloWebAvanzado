@@ -12,6 +12,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+<<<<<<< HEAD
         <style>
         body {
             font-family: Arial, sans-serif;
@@ -79,6 +80,8 @@
             color: #555;
         }
     </style>
+=======
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
     </head>
     <body>
         <h2>${horario != null ? "Editar" : "Nuevo"} Horario de Trabajo</h2>

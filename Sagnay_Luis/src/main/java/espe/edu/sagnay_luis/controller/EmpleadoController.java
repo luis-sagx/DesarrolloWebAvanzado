@@ -61,10 +61,17 @@ public class EmpleadoController extends HttpServlet {
 
         if (idStr != null && !idStr.isEmpty()) {
             int id = Integer.parseInt(idStr);
+<<<<<<< HEAD
             Empleado e = new Empleado(id, cargo, salario, true);
             empleadoDao.update(e);
         } else {
             Empleado e = new Empleado(cargo, salario, true);
+=======
+            Empleado e = new Empleado(id, cargo, salario);
+            empleadoDao.update(e);
+        } else {
+            Empleado e = new Empleado(cargo, salario);
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
             empleadoDao.save(e);
         }
 

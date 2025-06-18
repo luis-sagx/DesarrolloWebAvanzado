@@ -32,8 +32,13 @@ public class EmpleadoDao {
     }
 
     public List<Empleado> findAll() {
+<<<<<<< HEAD
         List<Empleado> empleados = new ArrayList<>();
         String sql = "SELECT * FROM Empleado WHERE activo = TRUE";
+=======
+        List<Empleado> lista = new ArrayList<>();
+        String sql = "SELECT * FROM Empleado";
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
         try (Connection conn = Conection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
@@ -42,6 +47,7 @@ public class EmpleadoDao {
                 e.setId_empleado(rs.getInt("id_empleado"));
                 e.setCargo(rs.getString("cargo"));
                 e.setSalario(rs.getFloat("salario"));
+<<<<<<< HEAD
                 e.setActivo(rs.getBoolean("activo"));
                 empleados.add(e);
             }
@@ -52,6 +58,16 @@ public class EmpleadoDao {
     }
 
 
+=======
+                lista.add(e);
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return lista;
+    }
+
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
     public Empleado findById(int id) {
         String sql = "SELECT * FROM Empleado WHERE id_empleado = ?";
         Empleado e = null;
@@ -86,15 +102,27 @@ public class EmpleadoDao {
     }
 
     public boolean delete(int id) {
+<<<<<<< HEAD
         String sql = "UPDATE Empleado SET activo = FALSE WHERE id_empleado = ?";
+=======
+        String sql = "DELETE FROM Empleado WHERE id_empleado = ?";
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
         try (Connection conn = Conection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setInt(1, id);
             return stmt.executeUpdate() > 0;
+<<<<<<< HEAD
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
         }
     }
 
+=======
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            return false;
+        }
+    }
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
 }

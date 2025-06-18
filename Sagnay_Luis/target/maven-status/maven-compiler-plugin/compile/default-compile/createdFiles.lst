@@ -1,12 +1,21 @@
 espe\edu\sagnay_luis\controller\HorarioController.class
+<<<<<<< HEAD
 espe\edu\sagnay_luis\PublicarEmpleado.class
 espe\edu\sagnay_luis\resources\JakartaEE10Resource.class
 espe\edu\sagnay_luis\model\Empleado.class
 espe\edu\sagnay_luis\resources\EmpleadoWebServiceImplement.class
+=======
+espe\edu\sagnay_luis\dao\Conection.class
+espe\edu\sagnay_luis\resources\JakartaEE10Resource.class
+espe\edu\sagnay_luis\model\Empleado.class
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
 espe\edu\sagnay_luis\dao\EmpleadoDao.class
 espe\edu\sagnay_luis\JakartaRestConfiguration.class
 espe\edu\sagnay_luis\controller\EmpleadoController.class
 espe\edu\sagnay_luis\dao\HorarioTrabajoDao.class
+<<<<<<< HEAD
 espe\edu\sagnay_luis\dao\Conection.class
 espe\edu\sagnay_luis\resources\EmpleadoWebService.class
+=======
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
 espe\edu\sagnay_luis\model\HorarioTrabajo.class

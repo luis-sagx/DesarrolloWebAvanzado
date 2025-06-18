@@ -10,6 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Formulario Empleado</title>
+<<<<<<< HEAD
         <style>
         body {
             font-family: Arial, sans-serif;
@@ -77,6 +78,8 @@
             color: #555;
         }
     </style>
+=======
+>>>>>>> 4cdb927144d782137baa43779d1f107fd8020d04
     </head>
     <body>
         <h2>${empleado != null ? "Editar" : "Nuevo"} Empleado</h2>
