@@ -1,0 +1,35 @@
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px #dd3f00;
+  width: 350px;
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  margin: 0 auto 3rem auto;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.info h1 {
+  font-size: 24px;
+  margin: 0;
+  color: #333;
+}
+
+.info h2 {
+  font-size: 18px;
+  color: #777;
+  margin: 5px 0;
+}
+
+.info p {
+  font-size: 14px;
+  color: #555;
+}
