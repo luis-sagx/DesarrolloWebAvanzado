@@ -1,0 +1,16 @@
+<h1>Vehículo</h1>
+
+<div id="card-car">
+  <h2>{{selectedCar.title}}</h2>
+  <p>Marca: {{selectedCar.brand}}</p>
+  <p>Modelo: {{selectedCar.model}}</p>
+  <p>Año: {{selectedCar.year}}</p>
+  <p>Descripción: {{selectedCar.description}}</p>
+</div>
+
+<div>
+  <button (click)="selectCar(0)">Mostrar Auto 1</button>
+  <button (click)="selectCar(1)">Mostrar Auto 2</button>
+  <button (click)="selectCar(2)">Mostrar Auto 3</button>
+  <button (click)="selectCar(3)">Mostrar Auto 4</button>
+</div>
