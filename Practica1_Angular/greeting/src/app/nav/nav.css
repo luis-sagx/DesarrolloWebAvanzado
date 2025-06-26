@@ -1,0 +1,54 @@
+/* Reset básico */
+nav, ul, li, a {
+  margin: 0;
+  padding: 0.2rem;
+  text-decoration: none;
+  list-style: none;
+}
+
+nav {
+  background-color: #2a92ab;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 4px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+nav ul li a:hover {
+  background-color: #24869e;
+}
+
+.active {
+  color: white;
+  font-weight: bold;
+}
