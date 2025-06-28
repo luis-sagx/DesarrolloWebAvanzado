@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Nav } from './nav/nav';
 
@@ -6,7 +6,7 @@ import { Nav } from './nav/nav';
   selector: 'app-root',
   imports: [RouterOutlet, Nav],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   protected title = 'greeting';
