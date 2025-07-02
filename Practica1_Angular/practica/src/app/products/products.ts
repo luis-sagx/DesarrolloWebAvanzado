@@ -13,4 +13,11 @@ export class Products {
     { id: 2, name: 'Product 2', price: 200 },
     { id: 3, name: 'Product 3', price: 300 }
   ]; 
+
+  protected selectedProduct: any = null;
+  protected index = 0;
+
+  protected showSelectedProduct(index : number): void {
+    this.selectedProduct = this.products[index]; 
+  }
 }

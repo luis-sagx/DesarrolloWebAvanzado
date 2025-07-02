@@ -6,3 +6,15 @@
         </li>
     </ul>
 </section>
+
+
+<section>
+    <button class="bg-blue-400 p-2 m-2 rounded-md" (click)="showSelectedProduct(0)">Show Selected Product 1</button>
+    <button class="bg-blue-400 p-2 m-2 rounded-md" (click)="showSelectedProduct(1)">Show Selected Product 2</button>
+    <button class="bg-blue-400 p-2 m-2 rounded-md" (click)="showSelectedProduct(2)">Show Selected Product 3</button>
+    <div *ngIf="selectedProduct" class="bg-gray-200 p-4 rounded-md m-5">
+        <h3>Selected Product:</h3>
+        <p>Name: {{ selectedProduct.name }}</p>
+        <p>Price: ${{ selectedProduct.price }}</p>
+    </div>
+</section>
