@@ -1,0 +1,8 @@
+<section class="bg-slate-100 p-4">
+    <h2>Our Products</h2>
+    <ul class="list-disc pl-5 bg-neutral-300 p-4">
+        <li *ngFor="let product of products">
+            {{ product.name }} - ${{ product.price }}
+        </li>
+    </ul>
+</section>
