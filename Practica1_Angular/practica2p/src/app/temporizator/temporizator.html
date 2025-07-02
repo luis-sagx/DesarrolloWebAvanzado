@@ -1,0 +1,43 @@
+<div class="max-w-2xl mx-auto mt-10 p-4 space-y-10">
+
+  <!-- Temporizador -->
+  <section class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6">
+    <h2 class="text-2xl font-bold text-center text-primary-900 dark:text-secondary-500 mb-4">⏳ Temporizador</h2>
+
+    <div class="space-y-4">
+      <label for="timeInput" class="block font-semibold text-gray-700 dark:text-gray-200">Tiempo en segundos</label>
+      <input
+        type="number"
+        id="timeInput"
+        [(ngModel)]="time"
+        class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-primary-900 dark:bg-gray-700 dark:text-white dark:border-gray-600"
+      />
+
+      <div class="flex justify-center gap-4 mt-2">
+        <button class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition" (click)="startTimer()">Iniciar</button>
+        <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition" (click)="stopAll()">Detener</button>
+        <button class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition" (click)="resetTimer()">Reiniciar</button>
+      </div>
+
+      <p class="text-center text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">
+        Tiempo restante: <span class="text-primary-900 dark:text-secondary-500">{{ time() }}s</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- Cronómetro -->
+  <section class="bg-white dark:bg-gray-800 shadow-lg rounded-xl p-6">
+    <h2 class="text-2xl font-bold text-center text-primary-900 dark:text-secondary-500 mb-4">⏱️ Cronómetro</h2>
+
+    <div class="flex justify-center gap-4">
+      <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition" (click)="startChronometer()">Iniciar</button>
+      <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition" (click)="stopAll()">Detener</button>
+      <button class="bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700 transition" (click)="resetChronometer()">Reiniciar</button>
+    </div>
+
+    <p class="text-center text-xl font-semibold text-gray-800 dark:text-gray-100 mt-4">
+      Tiempo contado: <span class="text-primary-900 dark:text-secondary-500">{{ chronometer() }}s</span>
+    </p>
+  </section>
+
+</div>
