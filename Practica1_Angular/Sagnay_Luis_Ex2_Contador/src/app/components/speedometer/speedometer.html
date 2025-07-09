@@ -1,0 +1,21 @@
+<div class="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center px-4">
+  <div class="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 border border-blue-200 flex flex-col items-center gap-6">
+    
+    <h1 class="text-3xl font-extrabold text-blue-800 text-center">
+      Velocímetro Digital
+    </h1>  
+
+    <app-speed-display [speed]="speed()" [speedClass]="speedClass()" />
+
+    @if (showWarning()) {
+      <p class="text-center text-red-600 font-semibold animate-pulse">
+        Velocidad máxima alcanzada (400 km/h)
+      </p>
+    }
+
+    <app-speed-controls 
+      (accelerate)="accelerate()"
+      (brake)="brake()"
+      (reset)="reset()" />
+  </div>
+</div>
