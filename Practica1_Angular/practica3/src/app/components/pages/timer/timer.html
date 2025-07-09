@@ -1,0 +1,61 @@
+<div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md text-center">
+  <h2 class="text-2xl font-bold text-slate-800 mb-4">⏳ Temporizador</h2>
+
+  @if (!running() && !finished()) {
+    <div class="flex justify-center gap-2 mb-6">
+      <input 
+        type="number" 
+        min="0" 
+        [value]="inputMinutes()" 
+        (input)="inputMinutes.set($any($event.target).valueAsNumber)" 
+        placeholder="Min" 
+        class="w-20 border border-slate-300 rounded px-2 py-1 text-center"
+      />
+      <span class="text-lg font-medium">:</span>
+      <input 
+        type="number" 
+        min="0" 
+        max="59" 
+        [value]="inputSeconds()" 
+        (input)="inputSeconds.set($any($event.target).valueAsNumber)"
+        placeholder="Seg" 
+        class="w-20 border border-slate-300 rounded px-2 py-1 text-center"
+      />
+    </div>
+  }
+
+  @if (running() || remainingMs() > 0 || finished()) {
+    <p class="text-4xl font-mono text-slate-700 mb-6">{{ formattedTime }}</p>
+  }
+
+  <div class="flex justify-center gap-4">
+    @if (!running() && !finished()) {
+      <button 
+        (click)="startTimer()" 
+        class="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-4 py-2 rounded"
+      >
+        Iniciar
+      </button>
+    }
+    @if (running()) {
+      <button 
+        (click)="pauseTimer()" 
+        class="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-4 py-2 rounded"
+      >
+        Pausar
+      </button>
+    }
+    @if (remainingMs() > 0 || finished()) {
+      <button 
+        (click)="resetTimer()" 
+        class="bg-rose-500 hover:bg-rose-600 text-white font-semibold px-4 py-2 rounded"
+      >
+        Reiniciar
+      </button>
+    }
+  </div>
+
+  @if (finished()) {
+    <p class="mt-4 text-green-600 font-bold animate-pulse text-xl">✅ ¡Tiempo terminado!</p>
+  }
+</div>

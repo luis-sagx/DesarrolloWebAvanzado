@@ -1,0 +1,33 @@
+<div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md text-center">
+  <h2 class="text-2xl font-bold text-slate-800 mb-6">⏱️ Cronómetro</h2>
+
+  <p class="text-4xl font-mono text-slate-700 mb-6">
+    {{ formattedTime }}
+  </p>
+
+  <div class="flex justify-center gap-4">
+    @if (!running()) {
+      <button 
+        (click)="start()" 
+        class="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold px-4 py-2 rounded"
+      >
+        Iniciar
+      </button>
+    }
+    @if (running()) {
+      <button 
+        (click)="pause()" 
+        class="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-4 py-2 rounded"
+      >
+        Pausar
+      </button>
+    }
+
+    <button 
+      (click)="reset()" 
+      class="bg-rose-500 hover:bg-rose-600 text-white font-semibold px-4 py-2 rounded"
+    >
+      Reiniciar
+    </button>
+  </div>
+</div>

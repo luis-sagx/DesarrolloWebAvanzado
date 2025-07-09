@@ -1,0 +1,18 @@
+<div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md text-center">
+  <h2 class="text-2xl font-bold text-slate-800 mb-4">🕒 Hora Local</h2>
+  <p class="text-3xl font-mono text-slate-700 mb-6">{{ localTime() }}</p>
+
+  <h3 class="text-xl font-semibold text-slate-700 mb-2">Ver hora en:</h3>
+  <ul class="space-y-2">
+    @for (zona of worldClocks; track zona.name) {
+      <li>
+        <button 
+          (click)="verZona(zona.name)"
+          class="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-medium py-2 px-4 rounded"
+        >
+          {{ zona.name }}
+        </button>
+      </li>
+    }
+  </ul>
+</div>
