@@ -12,10 +12,10 @@ export class Clock implements OnInit, OnDestroy {
   private intervalId: any;
 
   worldClocks = [
-    { name: 'Nueva York', offset: -4 },
-    { name: 'Londres', offset: 0 },
-    { name: 'Tokio', offset: 9 },
-    { name: 'Buenos Aires', offset: -3 }
+    { name: 'Nueva York' },
+    { name: 'Londres'},
+    { name: 'Tokio'},
+    { name: 'Buenos Aires'}
   ];
 
   constructor(private router: Router) {}
