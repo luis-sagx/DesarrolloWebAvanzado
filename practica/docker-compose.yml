@@ -1,0 +1,96 @@
+version: '3.8'
+
+services:
+  # Base de datos MySQL
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-prueba-luis-sagnay
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: prueba-luis-sagnay
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - microservices-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      timeout: 20s
+      retries: 10
+
+  # Servicio de Cursos
+  course-service:
+    image: luissagx/course:v1
+    container_name: course-service
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/prueba-luis-sagnay
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - microservices-network
+    restart: unless-stopped
+
+  # Servicio de Estudiantes
+  student-service:
+    image: luissagx/student:v1
+    container_name: student-service
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/prueba-luis-sagnay
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - microservices-network
+    restart: unless-stopped
+
+  # Servicio de Calificaciones
+  grades-service:
+    image: luissagx/grades:v1
+    container_name: grades-service
+    ports:
+      - "8083:8083"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/prueba-luis-sagnay
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      - microservices-network
+    restart: unless-stopped
+
+  # API Gateway
+  gateway-service:
+    image: luissagx/gateway:v1
+    container_name: gateway-service
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_CLOUD_GATEWAY_MVC_ROUTES_0_URI: http://student-service:8082
+      SPRING_CLOUD_GATEWAY_MVC_ROUTES_1_URI: http://course-service:8081
+      SPRING_CLOUD_GATEWAY_MVC_ROUTES_2_URI: http://grades-service:8083
+    depends_on:
+      - course-service
+      - student-service
+      - grades-service
+    networks:
+      - microservices-network
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+
+networks:
+  microservices-network:
+    driver: bridge
